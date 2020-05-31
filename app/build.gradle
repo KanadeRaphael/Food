@@ -1,0 +1,118 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.food"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //ButterKnife
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+
+    //logger
+    implementation 'com.orhanobut:logger:2.2.0'
+
+    //侧边栏UI
+    implementation 'com.mxn.soul:flowingdrawer-core:2.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+    //图片形状库
+    implementation 'com.github.siyamed:android-shape-imageview:0.9.3@aar'
+
+    //RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+    //CardView
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //翻页view
+    implementation 'com.github.czy1121:turncardlistview:1.0.0'
+
+    //Tablayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
+
+    //viewpager transforms
+    implementation 'com.ToxicBakery.viewpager.transforms:view-pager-transforms:2.0.24@aar'
+
+    //进度条
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+
+    //wave
+    implementation 'me.itangqi.waveloadingview:library:0.3.5'
+
+    //打分ui，无用
+    implementation 'com.github.CB-ysx:CBRatingBar:3.0.1'
+
+    //折线
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    //SearchView
+    implementation 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    //FloatButton
+    implementation 'com.nightonke:boommenu:2.1.1'
+
+    //混合式recyclerview
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+
+    //油表盘
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //picker
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+
+    //okHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.7.2'
+
+    // json
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    //横向picker
+    implementation 'com.github.adityagohad:HorizontalPicker:1.0.1'
+
+    implementation files('libs/YoudaoBase.jar')
+    implementation files('libs/YoudaoCnDictOffline.jar')
+    implementation files('libs/YoudaoTranslateOffline.jar')
+    implementation files('libs/YoudaoTranslateOnline.jar')
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation project(path: ':todaystepcounterlib')
+}

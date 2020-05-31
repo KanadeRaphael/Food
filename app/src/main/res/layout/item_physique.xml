@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="450dp"
+    android:layout_gravity="center"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:id="@+id/item_phy_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_phy_title_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/item_phy_first_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:enabled="false"
+            tools:text="第一个"
+            android:textSize="13sp"
+            android:visibility="gone">
+
+        </Button>
+
+        <Button
+            android:id="@+id/item_phy_second_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            tools:text="第一个"
+            android:textSize="13sp"
+            android:visibility="gone">
+
+        </Button>
+
+        <Button
+            android:id="@+id/item_phy_third_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:enabled="false"
+            tools:text="第一个"
+            android:textSize="13sp"
+            android:visibility="gone">
+
+        </Button>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
